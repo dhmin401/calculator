@@ -28,7 +28,9 @@ ops.forEach((op) => {
 
 function calculate(str) {
     try {
-        screen.textContent = eval(str.toString())
+        let result = eval(str.toString())
+        result = result === 'Infinity' ? '0' : result
+        screen.textContent = result
         update()
     }
     catch(err) {
