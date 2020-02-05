@@ -16,6 +16,11 @@ ops.forEach((op) => {
        if(op.id === 'c') {
            clear()
        }
+       else if(op.id === 'ce') {
+           str = str.substr(0, str.length - 1)
+           console.log(str)
+           screen.textContent = str
+       }
        else if(op.id !== '='){
            screen.textContent = ''
            str += op.id
